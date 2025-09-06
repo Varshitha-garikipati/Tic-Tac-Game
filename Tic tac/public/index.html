@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Tic Tac Toe - AI Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Brain Symbol -->
+        <div class="brain-symbol">
+            <i class="fas fa-brain"></i>
+        </div>
+
+        <!-- Game Stats -->
+        <div class="game-stats">
+            <div class="stat-card">
+                <i class="fas fa-user"></i>
+                <span class="stat-value" id="playerScore">0</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-robot"></i>
+                <span class="stat-value" id="aiScore">0</span>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-container">
+            <div class="game-board" id="gameBoard">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+
+        <!-- Game Status -->
+        <div class="game-status" id="gameStatus">
+            <div class="status-message">
+                <span>Your turn</span>
+            </div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button class="btn btn-primary" id="resetBtn">
+                <i class="fas fa-redo"></i>
+                New
+            </button>
+            <button class="btn btn-secondary" id="hintBtn">
+                <i class="fas fa-lightbulb"></i>
+                Hint
+            </button>
+        </div>
+
+        <!-- AI Info Message -->
+        <div class="ai-info">
+            <i class="fas fa-brain"></i>
+            <span>This AI uses Minimax Algorithm</span>
+        </div>
+
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner">
+                <i class="fas fa-robot fa-spin"></i>
+                <p>AI is thinking...</p>
+            </div>
+        </div>
+
+        <!-- Win Animation Overlay -->
+        <div class="win-overlay" id="winOverlay">
+            <div class="win-content">
+                <div class="win-icon" id="winIcon"></div>
+                <h2 class="win-title" id="winTitle"></h2>
+                <p class="win-message" id="winMessage"></p>
+                <button class="btn btn-primary" id="playAgainBtn">
+                    <i class="fas fa-play"></i>
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
